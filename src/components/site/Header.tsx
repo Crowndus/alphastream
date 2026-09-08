@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export function Header() {
   const DERIV_SIGNUP = import.meta.env.VITE_DERIV_SIGNUP;
-  const DERIV_LOGIN = import.meta.env.VITE_DERIV_LOGIN;
+  const TRADER_URL = import.meta.env.VITE_TRADER_URL;
 
   const [scrolled, setScrolled] = useState(false);
 
@@ -59,7 +59,7 @@ export function Header() {
 
         {/* Actions */}
         <div className="flex items-center gap-3">
-          <a href={DERIV_LOGIN} target="_blank" rel="noopener noreferrer">
+          <a href={TRADER_URL} target="_blank" rel="noopener noreferrer">
             <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
               Log in
             </Button>
