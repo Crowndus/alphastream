@@ -15,7 +15,7 @@ import { CandleBackground } from "@/components/site/CandleBackground";
 import { TestimonialsSection } from "@/components/site/TestimonialsSection";
 import { Button } from "@/components/ui/button";
 
-const DERIV_SIGNUP = import.meta.env.VITE_DERIV_SIGNUP;
+const TRADER_URL = import.meta.env.VITE_TRADER_URL;
 
 export default function HomePage() {
   return (
@@ -49,12 +49,12 @@ export default function HomePage() {
                 Join the silent revolution of data-driven traders. Start your free demo today.
               </p>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-4 lg:mt-12">
-                <a href={DERIV_SIGNUP} target="_blank" rel="noopener noreferrer">
+                <a href={`${TRADER_URL}/?signup=1`} target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="gap-2 px-10 shadow-2xl shadow-primary/30 text-base transition-transform hover:scale-105">
                     Launch Demo <span className="font-mono text-xs">↗</span>
                   </Button>
                 </a>
-                <a href={DERIV_SIGNUP} target="_blank" rel="noopener noreferrer">
+                <a href={`${TRADER_URL}/?signup=1`} target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" size="lg" className="transition-transform hover:scale-105">
                     Learn More
                   </Button>

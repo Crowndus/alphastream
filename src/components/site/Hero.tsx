@@ -10,7 +10,7 @@ const statusMessages = [
 ];
 
 export function Hero() {
-  const DERIV_SIGNUP = import.meta.env.VITE_DERIV_SIGNUP;
+  const TRADER_URL = import.meta.env.VITE_TRADER_URL;
 
   const [statusIndex, setStatusIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
@@ -167,12 +167,12 @@ export function Hero() {
             bias, and full transparency—now with live market visualizations.
           </p>
           <div className="animate-fade-in-up [animation-delay:360ms] flex flex-wrap gap-4">
-            <a href={DERIV_SIGNUP} target="_blank" rel="noopener noreferrer">
+            <a href={`${TRADER_URL}/?signup=1`} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="gap-2 px-8 shadow-2xl shadow-primary/30 transition-transform hover:scale-105">
                 Start Free Trial <ChevronRight className="h-5 w-5" />
               </Button>
             </a>
-            <a href={DERIV_SIGNUP} target="_blank" rel="noopener noreferrer">
+            <a href={`${TRADER_URL}/?signup=1`} target="_blank" rel="noopener noreferrer">
               <Button variant="outline" size="lg" className="transition-transform hover:scale-105">
                 View Demo
               </Button>

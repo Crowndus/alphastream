@@ -17,7 +17,7 @@ const after = [
 ];
 
 export function TransformSection() {
-  const DERIV_SIGNUP = import.meta.env.VITE_DERIV_SIGNUP;
+  const TRADER_URL = import.meta.env.VITE_TRADER_URL;
 
   return (
     <section className="relative overflow-hidden py-16 lg:py-24">
@@ -74,7 +74,7 @@ export function TransformSection() {
         <ScrollReveal delay={150}>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 text-center sm:gap-4 lg:mt-10">
             <a
-              href={DERIV_SIGNUP}
+              href={`${TRADER_URL}/?signup=1`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-transform hover:scale-105"

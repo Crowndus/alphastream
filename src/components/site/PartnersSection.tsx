@@ -21,7 +21,7 @@ const partners = [
 ];
 
 export function PartnersSection() {
-  const DERIV_SIGNUP = import.meta.env.VITE_DERIV_SIGNUP;
+  const TRADER_URL = import.meta.env.VITE_TRADER_URL;
 
   return (
     <section className="relative overflow-hidden py-16 lg:py-24">
@@ -41,7 +41,7 @@ export function PartnersSection() {
                 <h3 className="text-xl font-semibold">{p.name}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{p.tagline}</p>
                 <a
-                  href={DERIV_SIGNUP}
+                  href={`${TRADER_URL}/?signup=1`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-4 inline-flex items-center gap-1.5 rounded-lg border border-primary/30 px-4 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary/10 hover:border-primary"

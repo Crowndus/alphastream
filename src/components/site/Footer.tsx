@@ -20,8 +20,7 @@ const columns = [
 ];
 
 export function Footer() {
-  const DERIV_SIGNUP = import.meta.env.VITE_DERIV_SIGNUP;
-  const DERIV_LOGIN = import.meta.env.VITE_DERIV_LOGIN;
+  const TRADER_URL = import.meta.env.VITE_TRADER_URL;
 
   return (
     <footer className="border-t border-border/40 bg-background">
@@ -74,7 +73,7 @@ export function Footer() {
           <p className="font-medium">Ready to trade?</p>
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
             <a
-              href={DERIV_SIGNUP}
+              href={`${TRADER_URL}/?signup=1`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-transform hover:scale-105"
@@ -83,7 +82,7 @@ export function Footer() {
               Open Account
             </a>
             <a
-              href={DERIV_LOGIN}
+              href={TRADER_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 rounded-lg border border-primary/30 px-4 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary/10 hover:border-primary"
@@ -92,7 +91,7 @@ export function Footer() {
               Client Login
             </a>
             <a
-              href={DERIV_SIGNUP}
+              href={TRADER_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-medium text-foreground/90 transition-colors hover:bg-secondary"
