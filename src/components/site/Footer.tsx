@@ -1,13 +1,20 @@
 import { Twitter, Linkedin, Youtube, Instagram, KeyRound, Lock, BarChart3 } from "lucide-react";
 
-const columns = [
+type FooterLink = string | { label: string; href: string };
+
+const columns: { title: string; links: FooterLink[] }[] = [
   {
     title: "Product",
     links: ["Quant Engines", "Mirror Vault", "Risk Shield", "Instant Settlement"],
   },
   {
     title: "Platform",
-    links: ["cTrader", "Deriv MT5", "Deriv Bot"],
+    links: [
+      { label: "Alphastream Trader", href: "TRADER" },
+      { label: "Alphastream Bot", href: "BOT" },
+      { label: "Deriv cTrader", href: "DERIV_LOGIN" },
+      { label: "Deriv MT5", href: "DERIV_LOGIN" },
+    ],
   },
   {
     title: "Legal",
@@ -21,6 +28,15 @@ const columns = [
 
 export function Footer() {
   const TRADER_URL = import.meta.env.VITE_TRADER_URL;
+  const BOT_URL = import.meta.env.VITE_BOT_URL;
+  const DERIV_LOGIN = import.meta.env.VITE_DERIV_LOGIN;
+
+  const resolveHref = (key: string) => {
+    if (key === "TRADER") return TRADER_URL;
+    if (key === "BOT") return BOT_URL;
+    if (key === "DERIV_LOGIN") return DERIV_LOGIN;
+    return key;
+  };
 
   return (
     <footer className="border-t border-border/40 bg-background">
@@ -58,11 +74,28 @@ export function Footer() {
             <div key={col.title}>
               <h4 className="mb-3 text-sm font-semibold">{col.title}</h4>
               <ul className="space-y-2.5 text-sm text-muted-foreground">
-                {col.links.map((link) => (
-                  <li key={link}>
-                    <span className="cursor-default">{link}</span>
-                  </li>
-                ))}
+                {col.links.map((link) => {
+                  const label = typeof link === "string" ? link : link.label;
+                  if (typeof link === "string") {
+                    return (
+                      <li key={label}>
+                        <span className="cursor-default">{label}</span>
+                      </li>
+                    );
+                  }
+                  return (
+                    <li key={label}>
+                      <a
+                        href={resolveHref(link.href)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="transition-colors hover:text-primary"
+                      >
+                        {label}
+                      </a>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}

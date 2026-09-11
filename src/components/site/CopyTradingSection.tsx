@@ -26,7 +26,7 @@ const steps = [
 ];
 
 export function CopyTradingSection() {
-  const TRADER_URL = import.meta.env.VITE_TRADER_URL;
+  const DERIV_SIGNUP = import.meta.env.VITE_DERIV_SIGNUP;
 
   return (
     <section className="relative overflow-hidden py-16 lg:py-24">
@@ -70,7 +70,7 @@ export function CopyTradingSection() {
               Ready to mirror the top 1% of quants?
             </p>
             <a
-              href={`${TRADER_URL}/?signup=1`}
+              href={DERIV_SIGNUP}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-transform hover:scale-105"

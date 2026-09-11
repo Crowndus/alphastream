@@ -4,8 +4,8 @@ import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 
 export function Header() {
-  const DERIV_SIGNUP = import.meta.env.VITE_DERIV_SIGNUP;
   const TRADER_URL = import.meta.env.VITE_TRADER_URL;
+  const BOT_URL = import.meta.env.VITE_BOT_URL;
 
   const [scrolled, setScrolled] = useState(false);
 
@@ -59,12 +59,20 @@ export function Header() {
 
         {/* Actions */}
         <div className="flex items-center gap-3">
+          <a
+            href={BOT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden text-sm font-medium text-muted-foreground transition-colors hover:text-foreground sm:inline-block"
+          >
+            Bot Builder
+          </a>
           <a href={TRADER_URL} target="_blank" rel="noopener noreferrer">
             <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
               Log in
             </Button>
           </a>
-          <a href={DERIV_SIGNUP} target="_blank" rel="noopener noreferrer">
+          <a href={`${TRADER_URL}/?signup=1`} target="_blank" rel="noopener noreferrer">
             <Button size="sm" className="gap-1 shadow-lg shadow-primary/30 transition-transform hover:scale-105">
               Get Started <ArrowRight className="h-3.5 w-3.5" />
             </Button>
