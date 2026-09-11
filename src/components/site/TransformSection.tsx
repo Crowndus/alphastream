@@ -75,8 +75,6 @@ export function TransformSection() {
           <div className="mt-8 flex flex-col items-center justify-center gap-3 text-center sm:gap-4 lg:mt-10">
             <a
               href={`${TRADER_URL}/?signup=1`}
-              target="_blank"
-              rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-transform hover:scale-105"
             >
               Make the switch <ArrowRight className="h-3.5 w-3.5" />

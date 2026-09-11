@@ -61,18 +61,16 @@ export function Header() {
         <div className="flex items-center gap-3">
           <a
             href={BOT_URL}
-            target="_blank"
-            rel="noopener noreferrer"
             className="hidden text-sm font-medium text-muted-foreground transition-colors hover:text-foreground sm:inline-block"
           >
             Bot Builder
           </a>
-          <a href={TRADER_URL} target="_blank" rel="noopener noreferrer">
+          <a href={TRADER_URL}>
             <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
               Log in
             </Button>
           </a>
-          <a href={`${TRADER_URL}/?signup=1`} target="_blank" rel="noopener noreferrer">
+          <a href={`${TRADER_URL}/?signup=1`}>
             <Button size="sm" className="gap-1 shadow-lg shadow-primary/30 transition-transform hover:scale-105">
               Get Started <ArrowRight className="h-3.5 w-3.5" />
             </Button>

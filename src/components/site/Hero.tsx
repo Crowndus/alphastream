@@ -167,12 +167,12 @@ export function Hero() {
             bias, and full transparency—now with live market visualizations.
           </p>
           <div className="animate-fade-in-up [animation-delay:360ms] flex flex-wrap gap-4">
-            <a href={`${TRADER_URL}/?signup=1`} target="_blank" rel="noopener noreferrer">
+            <a href={`${TRADER_URL}/?signup=1`}>
               <Button size="lg" className="gap-2 px-8 shadow-2xl shadow-primary/30 transition-transform hover:scale-105">
                 Start Free Trial <ChevronRight className="h-5 w-5" />
               </Button>
             </a>
-            <a href={`${TRADER_URL}/?signup=1`} target="_blank" rel="noopener noreferrer">
+            <a href={`${TRADER_URL}/?signup=1`}>
               <Button variant="outline" size="lg" className="transition-transform hover:scale-105">
                 View Demo
               </Button>

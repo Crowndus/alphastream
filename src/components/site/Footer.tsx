@@ -87,8 +87,6 @@ export function Footer() {
                     <li key={label}>
                       <a
                         href={resolveHref(link.href)}
-                        target="_blank"
-                        rel="noopener noreferrer"
                         className="transition-colors hover:text-primary"
                       >
                         {label}
@@ -107,8 +105,6 @@ export function Footer() {
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
             <a
               href={`${TRADER_URL}/?signup=1`}
-              target="_blank"
-              rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-transform hover:scale-105"
             >
               <KeyRound className="h-3.5 w-3.5" />
@@ -116,8 +112,6 @@ export function Footer() {
             </a>
             <a
               href={TRADER_URL}
-              target="_blank"
-              rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 rounded-lg border border-primary/30 px-4 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary/10 hover:border-primary"
             >
               <Lock className="h-3.5 w-3.5" />
@@ -125,8 +119,6 @@ export function Footer() {
             </a>
             <a
               href={TRADER_URL}
-              target="_blank"
-              rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-medium text-foreground/90 transition-colors hover:bg-secondary"
             >
               <BarChart3 className="h-3.5 w-3.5" />
@@ -151,7 +143,7 @@ export function Footer() {
           <p>&copy; {new Date().getFullYear()} Alphastream Trader. All rights reserved.</p>
           <p>
             Powered by{" "}
-            <a href="https://deriv.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+            <a href="https://deriv.com" className="text-primary hover:underline">
               Deriv
             </a>
           </p>

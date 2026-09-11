@@ -52,16 +52,12 @@ export function PlatformsSection() {
                 <div className="mt-4 flex flex-wrap gap-3">
                   <a
                     href={DERIV_LOGIN}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 rounded-lg border border-primary/30 px-4 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary/10 hover:border-primary"
                   >
                     Access Live Markets
                   </a>
                   <a
                     href={DERIV_SIGNUP}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-medium text-foreground/90 transition-colors hover:bg-secondary"
                   >
                     Start Trading

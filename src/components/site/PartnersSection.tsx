@@ -42,8 +42,6 @@ export function PartnersSection() {
                 <p className="mt-2 text-sm text-muted-foreground">{p.tagline}</p>
                 <a
                   href={`${TRADER_URL}/?signup=1`}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="mt-4 inline-flex items-center gap-1.5 rounded-lg border border-primary/30 px-4 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary/10 hover:border-primary"
                 >
                   {p.cta} <ArrowRight className="h-3.5 w-3.5" />

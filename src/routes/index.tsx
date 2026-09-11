@@ -49,12 +49,12 @@ export default function HomePage() {
                 Join the silent revolution of data-driven traders. Start your free demo today.
               </p>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-4 lg:mt-12">
-                <a href={`${TRADER_URL}/?signup=1`} target="_blank" rel="noopener noreferrer">
+                <a href={`${TRADER_URL}/?signup=1`}>
                   <Button size="lg" className="gap-2 px-10 shadow-2xl shadow-primary/30 text-base transition-transform hover:scale-105">
                     Launch Demo <span className="font-mono text-xs">↗</span>
                   </Button>
                 </a>
-                <a href={`${TRADER_URL}/?signup=1`} target="_blank" rel="noopener noreferrer">
+                <a href={`${TRADER_URL}/?signup=1`}>
                   <Button variant="outline" size="lg" className="transition-transform hover:scale-105">
                     Learn More
                   </Button>

@@ -71,8 +71,6 @@ export function CopyTradingSection() {
             </p>
             <a
               href={DERIV_SIGNUP}
-              target="_blank"
-              rel="noopener noreferrer"
               className="inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-transform hover:scale-105"
             >
               Launch Mirror Vault <ArrowRight className="h-3.5 w-3.5" />
