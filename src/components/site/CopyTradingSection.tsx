@@ -1,6 +1,7 @@
 import { ScrollReveal } from "./ScrollReveal";
 import { CandleBackground } from "./CandleBackground";
 import { Users, SlidersHorizontal, RefreshCw, LineChart, ArrowRight } from "lucide-react";
+import { DERIV_SIGNUP } from '@/config/links';
 
 const steps = [
   {
@@ -26,7 +27,6 @@ const steps = [
 ];
 
 export function CopyTradingSection() {
-  const DERIV_SIGNUP = import.meta.env.VITE_DERIV_SIGNUP;
 
   return (
     <section className="relative overflow-hidden py-16 lg:py-24">

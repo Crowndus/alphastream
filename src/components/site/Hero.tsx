@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { CandleBackground } from "@/components/site/CandleBackground";
 import { ChevronRight, TrendingUp, Shield, Zap } from "lucide-react";
 import { useEffect, useState } from "react";
+import { TRADER_URL } from '@/config/links';
 
 const statusMessages = [
   "Scanning global liquidity pools...",
@@ -10,7 +11,6 @@ const statusMessages = [
 ];
 
 export function Hero() {
-  const TRADER_URL = import.meta.env.VITE_TRADER_URL;
 
   const [statusIndex, setStatusIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");

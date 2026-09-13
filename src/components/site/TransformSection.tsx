@@ -1,6 +1,7 @@
 import { ScrollReveal } from "./ScrollReveal";
 import { CandleBackground } from "./CandleBackground";
 import { X, Check, ArrowRight } from "lucide-react";
+import { TRADER_URL } from '@/config/links';
 
 const before = [
   "Entering trades on gut feeling and FOMO",
@@ -17,7 +18,6 @@ const after = [
 ];
 
 export function TransformSection() {
-  const TRADER_URL = import.meta.env.VITE_TRADER_URL;
 
   return (
     <section className="relative overflow-hidden py-16 lg:py-24">

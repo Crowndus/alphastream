@@ -14,8 +14,8 @@ import { ScrollReveal } from "@/components/site/ScrollReveal";
 import { CandleBackground } from "@/components/site/CandleBackground";
 import { TestimonialsSection } from "@/components/site/TestimonialsSection";
 import { Button } from "@/components/ui/button";
+import { TRADER_URL } from '@/config/links';
 
-const TRADER_URL = import.meta.env.VITE_TRADER_URL;
 
 export default function HomePage() {
   return (

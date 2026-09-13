@@ -1,6 +1,7 @@
 import { ScrollReveal } from "./ScrollReveal";
 import { CandleBackground } from "./CandleBackground";
 import { CheckCircle2 } from "lucide-react";
+import { DERIV_LOGIN, DERIV_SIGNUP } from '@/config/links';
 
 const platforms = [
   {
@@ -22,8 +23,6 @@ const platforms = [
 ];
 
 export function PlatformsSection() {
-  const DERIV_SIGNUP = import.meta.env.VITE_DERIV_SIGNUP;
-  const DERIV_LOGIN = import.meta.env.VITE_DERIV_LOGIN;
 
   return (
     <section className="relative overflow-hidden py-16 lg:py-24">

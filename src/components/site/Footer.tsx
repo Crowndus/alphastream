@@ -1,4 +1,5 @@
 import { Twitter, Linkedin, Youtube, Instagram, KeyRound, Lock, BarChart3 } from "lucide-react";
+import { BOT_URL, DERIV_LOGIN, TRADER_URL } from '@/config/links';
 
 type FooterLink = string | { label: string; href: string };
 
@@ -27,9 +28,6 @@ const columns: { title: string; links: FooterLink[] }[] = [
 ];
 
 export function Footer() {
-  const TRADER_URL = import.meta.env.VITE_TRADER_URL;
-  const BOT_URL = import.meta.env.VITE_BOT_URL;
-  const DERIV_LOGIN = import.meta.env.VITE_DERIV_LOGIN;
 
   const resolveHref = (key: string) => {
     if (key === "TRADER") return TRADER_URL;

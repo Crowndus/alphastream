@@ -2,10 +2,9 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
+import { BOT_URL, TRADER_URL } from '@/config/links';
 
 export function Header() {
-  const TRADER_URL = import.meta.env.VITE_TRADER_URL;
-  const BOT_URL = import.meta.env.VITE_BOT_URL;
 
   const [scrolled, setScrolled] = useState(false);
 
